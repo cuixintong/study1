@@ -3,6 +3,7 @@ package com.cui.maven.commonClassesApi.collection.list;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ListTest {
@@ -39,5 +40,26 @@ public class ListTest {
         scanner.close();
 
 
+    }
+
+    @Test
+    public void test2(){
+
+        ArrayList arrayList = new ArrayList();
+
+        for (int i = 0; i < 30; i++) {
+            String c =(char) (Math.random() * (122 - 97 + 1) + 97) + "";
+            arrayList.add(c);
+        }
+
+        System.out.println(arrayList);
+        System.out.println();
+    }
+
+    public static void ArrayTest(List list,String s){
+        int count = 0;
+        for (Object s1 : list) {
+            if (s1 == s) count++;
+        }
     }
 }
