@@ -33,7 +33,6 @@ public class CollectionTest {
     @Test
     public void test2(){
 
-
         Integer[] arr = {1, 2, 3};
         List<Integer> integers = Arrays.asList(arr);
         System.out.println(integers.size());//3
