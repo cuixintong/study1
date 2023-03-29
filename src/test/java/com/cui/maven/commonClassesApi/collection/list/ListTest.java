@@ -62,4 +62,10 @@ public class ListTest {
             if (s1 == s) count++;
         }
     }
+
+    @Test
+    public void test3(){
+        System.out.println(new Person("通话", 12).hashCode());
+        System.out.println(new Person("重地", 12).hashCode());
+    }
 }
