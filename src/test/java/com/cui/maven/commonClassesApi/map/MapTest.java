@@ -2,6 +2,9 @@ package com.cui.maven.commonClassesApi.map;
 
 import org.junit.Test;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.*;
 
 public class MapTest {
@@ -80,8 +83,23 @@ public class MapTest {
 
     }
     @Test
-    public void test4(){
-        Properties properties = new Properties();//键和值都是string，是hashtable的子类
+    public void test4() throws IOException {
+        Properties properties = new Properties();//键和值都是string，是hashtable的子类,常用来处理属性文件
+
+        File file = new File("info.properties");
+        System.out.println(file.getAbsolutePath());
+
+        FileInputStream fis = new FileInputStream(file);
+        properties.load(fis);
+
+        String name = properties.getProperty("name");
+        System.out.println(name);
+
+        String password = properties.getProperty("password");
+        System.out.println(password);
+
+        ArrayList arrayList = new ArrayList();
+
     }
 
 
