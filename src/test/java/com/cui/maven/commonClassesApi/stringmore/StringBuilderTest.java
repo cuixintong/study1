@@ -1,5 +1,6 @@
 package com.cui.maven.commonClassesApi.stringmore;
 
+@SuppressWarnings("removal")
 public class StringBuilderTest {
 
     public static void main(String[] args) {
@@ -10,5 +11,11 @@ public class StringBuilderTest {
         StringBuilder sb1 = new StringBuilder();
         sb1 = sb1.append('1').append('a');
         System.out.println(sb1);
+
+        String[] arr1 = null;
+        Object[] o = null;
+
+        o = arr1;
+
     }
 }
